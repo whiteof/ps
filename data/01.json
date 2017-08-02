@@ -1,0 +1,166 @@
+{
+    "id": "1",
+    "title": "Abdominal Mass",
+    "question": {
+        "id": "1",
+        "title": "Pain / distress?",
+        "answers": [
+                    {
+                    "id": "1",
+                    "title": "Yes",
+                    "result": {
+                    "id": "1",
+                    "title": "See Abdominal Pain",
+                    "disease_id": "2"
+                    }
+                    },
+                    {
+                    "id": "2",
+                    "title": "No",
+                    "question": {
+                    "id": "2",
+                    "title": "Age?",
+                    "answers": [
+                                {
+                                "id": "3",
+                                "title": "Infant/child",
+                                "question": {
+                                "id": "3",
+                                "title": "Location and associated symptoms?",
+                                "answers": [
+                                            {
+                                            "id": "5",
+                                            "title": "GU Symptoms: Frequency, Urgency, Dysuria, Hematuria",
+                                            "result": {
+                                            "id": "3",
+                                            "title": "Hydronephrosis (especially infant age)",
+                                            "script": {
+                                            "id": "1",
+                                            "title": "Hydronephrosis",
+                                            "values": [
+                                                       {
+                                                       "id": "1",
+                                                       "title": "Pathophysiology",
+                                                       "description": "Back-up of urine in the intra-renal collecting system (pelvis, calyces). May be due to Obstruction, Reflux, or Primary Dilation (poor muscular tone) of the collecting system."
+                                                       },
+                                                       {
+                                                       "id": "2",
+                                                       "title": "Epidemiology/ Predisposing Factors",
+                                                       "description": "Sometimes detected prenatally. Often a Positive Family History of congenital GU anomalies (including hydronephrosis, agenesis). Can be associated with other syndrome or genetic conditions."
+                                                       },
+                                                       {
+                                                       "id": "3",
+                                                       "title": "Clinical Features",
+                                                       "description": "Irregular voiding pattern or urinary symptoms (frequency, urgency, dysuria, hematuria). Higher risk for Urinary Tract Infection. If severe or progressive, can develop nephropathy with Hypertension, Proteinuria, Renal Insufficiency. Can be detected and graded by Renal Ultrasound."
+                                                       },
+                                                       {
+                                                       "id": "4",
+                                                       "title": "Associated Algorithms",
+                                                       "description": "Abdominal Mass"
+                                                       },
+                                                       {
+                                                       "id": "5",
+                                                       "title": "Author(s)",
+                                                       "description": "Adam Weinstein. Reviewers: Burstin, Len, Belkowitz. Last Review: 3/8/2017"
+                                                       }
+                                                       ]
+                                            }
+                                            }
+                                            },
+                                            {
+                                            "id": "6",
+                                            "title": "Constitutional Symptoms (Weight Loss, Anorexia, Fatigue, Pain)",
+                                            "result": {
+                                            "id": "4",
+                                            "title": "Neoplasm",
+                                            "script": {
+                                            "id": "2",
+                                            "title": "Abdominal Neoplasm",
+                                            "values": [
+                                                       {
+                                                       "id": "6",
+                                                       "title": "Pathophysiology",
+                                                       "description": "Solid tumor arising from abdominal tissue grows large enough to become palpable. May cause direct effects (e.g. Hematuria in Wilm's, Autonomic symptoms in Neuroblastoma) or exert symptoms through mass effect (e.g. emesis, constipation)."
+                                                       },
+                                                       {
+                                                       "id": "7",
+                                                       "title": "Epidemiology/ Predisposing Factors",
+                                                       "description": "Infant and toddlers—most common are Wilm's Tumor and Neuroblastoma. Wilm's tumor may be associated with certain genetic conditions (e.g. WAGR, Beckwidth Wiedemann, Denys-Drash). School-age and older children—Leukemia, Lymphoma most common.   Also Hepatic Tumors, Ovarian Tumors, Sarcomas."
+                                                       },
+                                                       {
+                                                       "id": "8",
+                                                       "title": "Clinical Features",
+                                                       "description": "Vary based on underlying etiology, but may consist of: Constitutional Symptoms—Weight loss, anorexia, fatigue, pain. Cardiovascular symptoms—can have high VMA production (Neuroblastoma), Hypertension (Neuroblastoma, Wilm’s). GI Symptoms—Emesis, constipation. GU Symptoms—Hematuria (Wilm’s). Hematologic Symptoms/Concerns (Leukemia, Lymphoma, Metastases)—Infection risk from Leukopenia, Anemia, Thrombocytopenia—and related symptoms and findings."
+                                                       },
+                                                       {
+                                                       "id": "9",
+                                                       "title": "Associated Algorithms",
+                                                       "description": "Abdominal Mass Limp"
+                                                       },
+                                                       {
+                                                       "id": "10",
+                                                       "title": "Author(s)",
+                                                       "description": "Adam Weinstein. Reviewers: Burstin, Len, Belkowitz. Last Review: 3/8/2017"
+                                                       }
+                                                       ]
+                                            }
+                                            }
+                                            },
+                                            {
+                                            "id": 7,
+                                            "title": "Left Sided and/or GI Symptoms Constipation or Irregular Stool Pattern, Encopresis, Anorexia, Emesis if servere.",
+                                            "result": {
+                                            "id": "5",
+                                            "title": "Stool",
+                                            "script": {
+                                            "id": "3",
+                                            "title": "Stool Impaction",
+                                            "values": [
+                                                       {
+                                                       "id": "11",
+                                                       "title": "Pathophysiology",
+                                                       "description": "Back-up and Hardening of Stool in Rectum, Sigmoid, +/- Descending Colon. Poor muscular tone or stool withholding behaviors."
+                                                       },
+                                                       {
+                                                       "id": "12",
+                                                       "title": "Epidemiology/ Predisposing Factors",
+                                                       "description": "Infant—likely related to conditions with poor GI muscular tone or mobility. Young Child/School-Age Child—Stool withholding behaviors, maybe behavioral or related to underlying pathology."
+                                                       },
+                                                       {
+                                                       "id": "13",
+                                                       "title": "Clinical Features",
+                                                       "description": "Left-sided abdominal mass. Constipation or irregular stooling pattern, encopresis. Abdominal pain. Anorexia and/or emesis if severe."
+                                                       },
+                                                       {
+                                                       "id": "14",
+                                                       "title": "Associated Algorithms",
+                                                       "description": "Abdominal Mass. Abdominal Pain (see Constipation IS)"
+                                                       },
+                                                       {
+                                                       "id": "15",
+                                                       "title": "Author(s)",
+                                                       "description": "Adam Weinstein. Reviewers: Burstin, Len, Belkowitz. Last Review: 3/8/2017"
+                                                       }
+                                                       ]
+                                            }
+                                            }
+                                            }
+                                            ]
+                                }
+                                },
+                                {
+                                "id": "4",
+                                "title": "Adolescent",
+                                "result": {
+                                "id": "2",
+                                "title": "See Abdominal Mass in Adolescents",
+                                "disease_id": "3"
+                                }
+                                }
+                                ]
+                    }
+                    }
+                    
+                    ]
+    }
+}
