@@ -105,6 +105,26 @@ class ScriptsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.view.endEditing(true)
+        let path = Bundle.main.path(forResource: "01", ofType: "json")
+        do {
+            let jsonString = try NSString(contentsOfFile: path!, encoding: String.Encoding.utf8.rawValue)
+            
+            if let data = jsonString.data(using: String.Encoding.utf8.rawValue) {
+                do {
+                    if let jsonObj = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                        if let question = jsonObj["question"] as? [String:Any] {
+                            let questionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+                            questionViewController.currentQuestion = question
+                            self.navigationController?.pushViewController(questionViewController, animated: true)
+                        }
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }catch {
+            print("Not working!")
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 

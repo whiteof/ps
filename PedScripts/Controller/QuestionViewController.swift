@@ -8,39 +8,14 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
-
+class QuestionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var currentQuestion: [String:Any]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
-        let path = Bundle.main.path(forResource: "01", ofType: "json")
-        do {
-            let jsonString = try NSString(contentsOfFile: path!, encoding: String.Encoding.utf8.rawValue)
-            
-            if let data = jsonString.data(using: String.Encoding.utf8.rawValue) {
-                do {
-                    if let jsonObj = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        let diseaseEntity = Disease()
-                        diseaseEntity.id = (jsonObj["id"] as! NSString).integerValue
-                        diseaseEntity.title = jsonObj["title"] as! String
-                    }
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }catch {
-            print("Not working!")
-        }
-        
-        
-        
-        
-        
-        /*
-
-        */
         
     }
 
@@ -50,18 +25,67 @@ class QuestionViewController: UIViewController {
     }
     
     
+    // MARK: - Table view data source
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
-    */
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        if let question = self.currentQuestion {
+            if let answers = question["answers"] as? [[String:Any]] {
+                return answers.count
+            }
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let headerCell = tableView.dequeueReusableCell(withIdentifier: "QuestionHeaderCell") {
+            if let question = self.currentQuestion {
+                if let title = question["title"] as? String {
+                    headerCell.textLabel?.text = title
+                }
+            }
+            return headerCell
+        }
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionCell", for: indexPath)
+        
+        if let question = self.currentQuestion {
+            if let answers = question["answers"] as? [[String:Any]] {
+                let answer = answers[indexPath.row]
+                if let title = answer["title"] as? String {
+                    cell.textLabel?.text = title
+                }
+            }
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let question = self.currentQuestion {
+            if let answers = question["answers"] as? [[String:Any]] {
+                let answer = answers[indexPath.row]
+                if let subQuestion = answer["question"] as? [String:Any] {
+                    let questionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
+                    questionViewController.currentQuestion = subQuestion
+                    self.navigationController?.pushViewController(questionViewController, animated: true)
+                }else if let result = answer["result"] as? [String:Any] {
+                    let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+                    resultViewController.result = result
+                    self.navigationController?.pushViewController(resultViewController, animated: true)
+                }
+            }
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075E2C151F3285450006F4AF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E2C141F3285450006F4AF /* ResultViewController.swift */; };
+		075E2C171F32895F0006F4AF /* ScriptValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E2C161F32895F0006F4AF /* ScriptValueViewController.swift */; };
 		A82DB5B31F30ED5B00B816F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DB5B21F30ED5B00B816F7 /* AppDelegate.swift */; };
 		A82DB5B81F30ED5B00B816F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82DB5B61F30ED5B00B816F7 /* Main.storyboard */; };
 		A82DB5BA1F30ED5B00B816F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A82DB5B91F30ED5B00B816F7 /* Assets.xcassets */; };
@@ -21,12 +23,6 @@
 		A89CE2F61F321D360077C264 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CE2F51F321D360077C264 /* UIHelper.swift */; };
 		A8ECCA3D1F3229F400773D87 /* WhoWeAreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */; };
 		A8ECCA3F1F3230ED00773D87 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA3E1F3230ED00773D87 /* QuestionViewController.swift */; };
-		A8ECCA421F32516E00773D87 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA411F32516E00773D87 /* Disease.swift */; };
-		A8ECCA441F3251B100773D87 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA431F3251B100773D87 /* Question.swift */; };
-		A8ECCA461F3251FA00773D87 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA451F3251FA00773D87 /* Answer.swift */; };
-		A8ECCA481F32523400773D87 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA471F32523400773D87 /* Result.swift */; };
-		A8ECCA4A1F3252B200773D87 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA491F3252B200773D87 /* Script.swift */; };
-		A8ECCA4C1F3264CD00773D87 /* ScriptValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA4B1F3264CC00773D87 /* ScriptValue.swift */; };
 		A8ECCA4F1F32653700773D87 /* 01.json in Resources */ = {isa = PBXBuildFile; fileRef = A8ECCA4E1F32653600773D87 /* 01.json */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075E2C141F3285450006F4AF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		075E2C161F32895F0006F4AF /* ScriptValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptValueViewController.swift; sourceTree = "<group>"; };
 		A82DB5AF1F30ED5B00B816F7 /* PedScripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedScripts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82DB5B21F30ED5B00B816F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82DB5B71F30ED5B00B816F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,12 +66,6 @@
 		A89CE2F51F321D360077C264 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoWeAreViewController.swift; sourceTree = "<group>"; };
 		A8ECCA3E1F3230ED00773D87 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		A8ECCA411F32516E00773D87 /* Disease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
-		A8ECCA431F3251B100773D87 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		A8ECCA451F3251FA00773D87 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		A8ECCA471F32523400773D87 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		A8ECCA491F3252B200773D87 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
-		A8ECCA4B1F3264CC00773D87 /* ScriptValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptValue.swift; sourceTree = "<group>"; };
 		A8ECCA4E1F32653600773D87 /* 01.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 01.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +122,6 @@
 				A82DB5E21F31002C00B816F7 /* Controller */,
 				A82DB5E31F31003300B816F7 /* Component */,
 				A89CE2F41F321D250077C264 /* Helper */,
-				A8ECCA401F32515000773D87 /* Entity */,
 				A82DB5B21F30ED5B00B816F7 /* AppDelegate.swift */,
 				A82DB5B61F30ED5B00B816F7 /* Main.storyboard */,
 				A82DB5B91F30ED5B00B816F7 /* Assets.xcassets */,
@@ -165,6 +156,8 @@
 				A89CE2EF1F32154B0077C264 /* HowToUseViewController.swift */,
 				A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */,
 				A8ECCA3E1F3230ED00773D87 /* QuestionViewController.swift */,
+				075E2C141F3285450006F4AF /* ResultViewController.swift */,
+				075E2C161F32895F0006F4AF /* ScriptValueViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,19 +185,6 @@
 				A89CE2F51F321D360077C264 /* UIHelper.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		A8ECCA401F32515000773D87 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				A8ECCA411F32516E00773D87 /* Disease.swift */,
-				A8ECCA431F3251B100773D87 /* Question.swift */,
-				A8ECCA451F3251FA00773D87 /* Answer.swift */,
-				A8ECCA471F32523400773D87 /* Result.swift */,
-				A8ECCA491F3252B200773D87 /* Script.swift */,
-				A8ECCA4B1F3264CC00773D87 /* ScriptValue.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		A8ECCA4D1F32651800773D87 /* data */ = {
@@ -349,19 +329,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8ECCA3D1F3229F400773D87 /* WhoWeAreViewController.swift in Sources */,
-				A8ECCA481F32523400773D87 /* Result.swift in Sources */,
 				A82DB5E61F3104BF00B816F7 /* TabBarController.swift in Sources */,
 				A89CE2F01F32154B0077C264 /* HowToUseViewController.swift in Sources */,
-				A8ECCA461F3251FA00773D87 /* Answer.swift in Sources */,
 				A89CE2EC1F3107550077C264 /* ScriptsViewController.swift in Sources */,
 				A82DB5E11F31002300B816F7 /* CommonNavigationController.swift in Sources */,
+				075E2C151F3285450006F4AF /* ResultViewController.swift in Sources */,
 				A89CE2F31F321C640077C264 /* UILabelExtension.swift in Sources */,
-				A8ECCA4A1F3252B200773D87 /* Script.swift in Sources */,
-				A8ECCA421F32516E00773D87 /* Disease.swift in Sources */,
 				A82DB5B31F30ED5B00B816F7 /* AppDelegate.swift in Sources */,
-				A8ECCA4C1F3264CD00773D87 /* ScriptValue.swift in Sources */,
+				075E2C171F32895F0006F4AF /* ScriptValueViewController.swift in Sources */,
 				A89CE2F61F321D360077C264 /* UIHelper.swift in Sources */,
-				A8ECCA441F3251B100773D87 /* Question.swift in Sources */,
 				A8ECCA3F1F3230ED00773D87 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
