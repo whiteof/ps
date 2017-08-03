@@ -115,6 +115,9 @@ class ScriptsViewController: UIViewController, UITableViewDelegate, UITableViewD
                         if let question = jsonObj["question"] as? [String:Any] {
                             let questionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
                             questionViewController.currentQuestion = question
+                            if let title = jsonObj["title"] as? String {
+                                questionViewController.diseaseTitle = title
+                            }
                             self.navigationController?.pushViewController(questionViewController, animated: true)
                         }
                     }
@@ -132,14 +135,8 @@ class ScriptsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.view.endEditing(true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindToScripts(segue: UIStoryboardSegue) {
+        
     }
-    */
 
 }

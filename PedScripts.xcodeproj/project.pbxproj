@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		075E2C151F3285450006F4AF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E2C141F3285450006F4AF /* ResultViewController.swift */; };
 		075E2C171F32895F0006F4AF /* ScriptValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075E2C161F32895F0006F4AF /* ScriptValueViewController.swift */; };
+		571B3F871F33776A00C7A7C9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B3F861F33776A00C7A7C9 /* CustomTableViewCell.swift */; };
 		A82DB5B31F30ED5B00B816F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DB5B21F30ED5B00B816F7 /* AppDelegate.swift */; };
 		A82DB5B81F30ED5B00B816F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82DB5B61F30ED5B00B816F7 /* Main.storyboard */; };
 		A82DB5BA1F30ED5B00B816F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A82DB5B91F30ED5B00B816F7 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		075E2C141F3285450006F4AF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		075E2C161F32895F0006F4AF /* ScriptValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptValueViewController.swift; sourceTree = "<group>"; };
+		571B3F861F33776A00C7A7C9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A82DB5AF1F30ED5B00B816F7 /* PedScripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PedScripts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82DB5B21F30ED5B00B816F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A82DB5B71F30ED5B00B816F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A82DB5B11F30ED5B00B816F7 /* PedScripts */,
-				A8ECCA4D1F32651800773D87 /* data */,
+				A8ECCA4D1F32651800773D87 /* Data */,
 				A82DB5C61F30ED5B00B816F7 /* PedScriptsTests */,
 				A82DB5D11F30ED5B00B816F7 /* PedScriptsUITests */,
 				A82DB5B01F30ED5B00B816F7 /* Products */,
@@ -167,6 +169,7 @@
 			children = (
 				A82DB5E01F31002300B816F7 /* CommonNavigationController.swift */,
 				A82DB5E51F3104BF00B816F7 /* TabBarController.swift */,
+				571B3F861F33776A00C7A7C9 /* CustomTableViewCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -187,12 +190,12 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		A8ECCA4D1F32651800773D87 /* data */ = {
+		A8ECCA4D1F32651800773D87 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				A8ECCA4E1F32653600773D87 /* 01.json */,
 			);
-			path = data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +337,7 @@
 				A89CE2EC1F3107550077C264 /* ScriptsViewController.swift in Sources */,
 				A82DB5E11F31002300B816F7 /* CommonNavigationController.swift in Sources */,
 				075E2C151F3285450006F4AF /* ResultViewController.swift in Sources */,
+				571B3F871F33776A00C7A7C9 /* CustomTableViewCell.swift in Sources */,
 				A89CE2F31F321C640077C264 /* UILabelExtension.swift in Sources */,
 				A82DB5B31F30ED5B00B816F7 /* AppDelegate.swift in Sources */,
 				075E2C171F32895F0006F4AF /* ScriptValueViewController.swift in Sources */,
