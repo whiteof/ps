@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // remove user data
+        //self.userDefaults.removeObject(forKey: "edu.cornell.weill.PedScripts.firstTimeUser")
+        
         return true
     }
     

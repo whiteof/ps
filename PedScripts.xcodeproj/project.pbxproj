@@ -154,6 +154,8 @@
 		A82DB5E21F31002C00B816F7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A82DB5E51F3104BF00B816F7 /* TabBarController.swift */,
+				A82DB5E01F31002300B816F7 /* CommonNavigationController.swift */,
 				A89CE2EB1F3107550077C264 /* ScriptsViewController.swift */,
 				A89CE2EF1F32154B0077C264 /* HowToUseViewController.swift */,
 				A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */,
@@ -167,8 +169,6 @@
 		A82DB5E31F31003300B816F7 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A82DB5E01F31002300B816F7 /* CommonNavigationController.swift */,
-				A82DB5E51F3104BF00B816F7 /* TabBarController.swift */,
 				571B3F861F33776A00C7A7C9 /* CustomTableViewCell.swift */,
 			);
 			path = Component;

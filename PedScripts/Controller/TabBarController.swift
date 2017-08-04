@@ -13,6 +13,15 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let userDefaults = UserDefaults.standard
+        if let userDefaultsValue = userDefaults.object(forKey: "edu.cornell.weill.PedScripts.firstTimeUser") as? Bool {
+            if userDefaultsValue != true {
+                userDefaults.set(true, forKey: "edu.cornell.weill.PedScripts.firstTimeUser")
+                userDefaults.synchronize()
+                self.selectedIndex = 1
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

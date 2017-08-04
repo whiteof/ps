@@ -6,8 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -230,14 +230,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LyF-b6-ifz">
-                                        <rect key="frame" x="56.5" y="30" width="318.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="33" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.89411764705882346" green="0.71764705882352942" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="kwj-A2-Lrh"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISEASE TITLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vku-zn-VSz">
-                                        <rect key="frame" x="20" y="18" width="335" height="24"/>
+                                        <rect key="frame" x="20" y="21" width="335" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -245,16 +245,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="LyF-b6-ifz" firstAttribute="top" secondItem="Nin-vx-FVt" secondAttribute="top" constant="30" id="AKf-b7-jmu"/>
+                                    <constraint firstItem="LyF-b6-ifz" firstAttribute="top" secondItem="Nin-vx-FVt" secondAttribute="top" constant="33" id="AKf-b7-jmu"/>
                                     <constraint firstAttribute="trailing" secondItem="vku-zn-VSz" secondAttribute="trailing" constant="20" id="Adj-lt-VjT"/>
                                     <constraint firstAttribute="trailing" secondItem="LyF-b6-ifz" secondAttribute="trailing" id="GSx-mO-nWR"/>
                                     <constraint firstAttribute="height" constant="60" id="KWk-G3-Agi"/>
                                     <constraint firstItem="OeB-bg-iPz" firstAttribute="leading" secondItem="Nin-vx-FVt" secondAttribute="leading" id="L50-SX-Srv"/>
                                     <constraint firstItem="OeB-bg-iPz" firstAttribute="top" secondItem="Nin-vx-FVt" secondAttribute="top" constant="10" id="Me3-mi-HLa"/>
-                                    <constraint firstItem="vku-zn-VSz" firstAttribute="centerY" secondItem="Nin-vx-FVt" secondAttribute="centerY" id="VJ1-Cx-0k8"/>
+                                    <constraint firstItem="vku-zn-VSz" firstAttribute="centerY" secondItem="LyF-b6-ifz" secondAttribute="top" id="chO-Vq-hiT"/>
                                     <constraint firstItem="vku-zn-VSz" firstAttribute="leading" secondItem="Nin-vx-FVt" secondAttribute="leading" constant="20" id="vwX-WU-6VL"/>
                                     <constraint firstAttribute="trailing" secondItem="OeB-bg-iPz" secondAttribute="trailing" id="xEe-Ye-5JG"/>
-                                    <constraint firstItem="LyF-b6-ifz" firstAttribute="leading" secondItem="Nin-vx-FVt" secondAttribute="centerX" multiplier="0.3" id="xwb-8X-OMC"/>
+                                    <constraint firstItem="LyF-b6-ifz" firstAttribute="leading" secondItem="Nin-vx-FVt" secondAttribute="leading" id="xwb-8X-OMC"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -318,14 +318,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vu7-pN-mYf">
-                                        <rect key="frame" x="56.5" y="30" width="318.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="33" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.71764705880000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="PrT-BS-HOD"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISEASE TITLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4p-Z4-u1b">
-                                        <rect key="frame" x="20" y="18" width="335" height="24"/>
+                                        <rect key="frame" x="20" y="21" width="335" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -334,14 +334,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="jPW-ig-QrX" secondAttribute="trailing" id="101-qS-HVz"/>
-                                    <constraint firstItem="Vu7-pN-mYf" firstAttribute="top" secondItem="Mm4-D6-Xx8" secondAttribute="top" constant="30" id="Is9-2K-Ssm"/>
+                                    <constraint firstItem="Vu7-pN-mYf" firstAttribute="top" secondItem="Mm4-D6-Xx8" secondAttribute="top" constant="33" id="Is9-2K-Ssm"/>
                                     <constraint firstItem="jPW-ig-QrX" firstAttribute="top" secondItem="Mm4-D6-Xx8" secondAttribute="top" constant="10" id="L32-Lh-iGH"/>
                                     <constraint firstAttribute="height" constant="60" id="LKo-6l-KUm"/>
                                     <constraint firstAttribute="trailing" secondItem="L4p-Z4-u1b" secondAttribute="trailing" constant="20" id="Snj-SH-alE"/>
                                     <constraint firstAttribute="trailing" secondItem="Vu7-pN-mYf" secondAttribute="trailing" id="TZB-JB-8Ho"/>
                                     <constraint firstItem="jPW-ig-QrX" firstAttribute="leading" secondItem="Mm4-D6-Xx8" secondAttribute="leading" id="W5t-dt-VVy"/>
-                                    <constraint firstItem="Vu7-pN-mYf" firstAttribute="leading" secondItem="Mm4-D6-Xx8" secondAttribute="centerX" multiplier="0.3" id="Y7X-7Y-DoG"/>
-                                    <constraint firstItem="L4p-Z4-u1b" firstAttribute="centerY" secondItem="Mm4-D6-Xx8" secondAttribute="centerY" id="jI8-zg-KTz"/>
+                                    <constraint firstItem="Vu7-pN-mYf" firstAttribute="leading" secondItem="Mm4-D6-Xx8" secondAttribute="leading" id="Y7X-7Y-DoG"/>
+                                    <constraint firstItem="L4p-Z4-u1b" firstAttribute="centerY" secondItem="Vu7-pN-mYf" secondAttribute="top" id="o0x-OY-7eO"/>
                                     <constraint firstItem="L4p-Z4-u1b" firstAttribute="leading" secondItem="Mm4-D6-Xx8" secondAttribute="leading" constant="20" id="xeG-V0-TfT"/>
                                 </constraints>
                             </view>
@@ -388,14 +388,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-wK-9z6">
-                                        <rect key="frame" x="56.5" y="30" width="318.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="33" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.71764705880000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="HMK-dn-uCg"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISEASE TITLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2n-i9-PeK">
-                                        <rect key="frame" x="20" y="18" width="335" height="24"/>
+                                        <rect key="frame" x="20" y="21" width="335" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -404,14 +404,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ByI-0e-67B" secondAttribute="trailing" id="18b-Ls-63y"/>
-                                    <constraint firstItem="zgR-wK-9z6" firstAttribute="top" secondItem="tNM-Wh-fag" secondAttribute="top" constant="30" id="213-Cz-DxJ"/>
+                                    <constraint firstItem="zgR-wK-9z6" firstAttribute="top" secondItem="tNM-Wh-fag" secondAttribute="top" constant="33" id="213-Cz-DxJ"/>
                                     <constraint firstAttribute="height" constant="60" id="CT7-Ff-ZC3"/>
+                                    <constraint firstItem="D2n-i9-PeK" firstAttribute="centerY" secondItem="zgR-wK-9z6" secondAttribute="top" id="LrN-Zd-eCD"/>
                                     <constraint firstItem="D2n-i9-PeK" firstAttribute="leading" secondItem="tNM-Wh-fag" secondAttribute="leading" constant="20" id="TAP-CX-8YI"/>
                                     <constraint firstItem="ByI-0e-67B" firstAttribute="leading" secondItem="tNM-Wh-fag" secondAttribute="leading" id="WNY-A4-ZMq"/>
                                     <constraint firstAttribute="trailing" secondItem="D2n-i9-PeK" secondAttribute="trailing" constant="20" id="Ws6-Od-hZe"/>
                                     <constraint firstItem="ByI-0e-67B" firstAttribute="top" secondItem="tNM-Wh-fag" secondAttribute="top" constant="10" id="Zla-Ld-d1R"/>
-                                    <constraint firstItem="zgR-wK-9z6" firstAttribute="leading" secondItem="tNM-Wh-fag" secondAttribute="centerX" multiplier="0.3" id="fTl-SK-1mf"/>
-                                    <constraint firstItem="D2n-i9-PeK" firstAttribute="centerY" secondItem="tNM-Wh-fag" secondAttribute="centerY" id="lJk-eJ-CII"/>
+                                    <constraint firstItem="zgR-wK-9z6" firstAttribute="leading" secondItem="tNM-Wh-fag" secondAttribute="leading" id="fTl-SK-1mf"/>
                                     <constraint firstAttribute="trailing" secondItem="zgR-wK-9z6" secondAttribute="trailing" id="mvg-Kt-QzB"/>
                                 </constraints>
                             </view>

@@ -24,9 +24,13 @@ class ScriptValueViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.diseaseLabel.text = self.diseaseTitle.uppercased()
+        // change back button
+        let backImage = UIImage(named: "Navbar Button Back")
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Navbar Button Back"), style: .plain, target: self, action: #selector(self.backAction(_:)))
         // add close button
-        //let closeButton = UIBarButtonItem(image: UIImage(named: "imagename"), style: .plain, target: self, action: Selector("action"))
-        let closeButton = UIBarButtonItem.init(title: "Close", style: .plain, target: self, action: #selector(self.closeAction(_:)))
+        let closeButton = UIBarButtonItem(image: UIImage(named: "Navbar Button Close"), style: .plain, target: self, action: #selector(self.closeAction(_:)))
         self.navigationItem.rightBarButtonItem = closeButton
 
         var label = UILabel()
@@ -53,6 +57,10 @@ class ScriptValueViewController: UIViewController {
     
     @objc func closeAction(_ sender:UIBarButtonItem){
         self.performSegue(withIdentifier: "unwindToScripts", sender: self)
+    }
+
+    @objc func backAction(_ sender:UIBarButtonItem){
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

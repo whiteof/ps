@@ -20,9 +20,13 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         self.diseaseLabel.text = self.diseaseTitle.uppercased()
+        // change back button
+        let backImage = UIImage(named: "Navbar Button Back")
+        self.navigationController?.navigationBar.backIndicatorImage = backImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Navbar Button Back"), style: .plain, target: self, action: #selector(self.backAction(_:)))
         // add close button
-        //let closeButton = UIBarButtonItem(image: UIImage(named: "imagename"), style: .plain, target: self, action: Selector("action"))
-        let closeButton = UIBarButtonItem.init(title: "Close", style: .plain, target: self, action: #selector(self.closeAction(_:)))
+        let closeButton = UIBarButtonItem(image: UIImage(named: "Navbar Button Close"), style: .plain, target: self, action: #selector(self.closeAction(_:)))
         self.navigationItem.rightBarButtonItem = closeButton
     }
     
@@ -103,7 +107,7 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
             }
             // add image
             cell.imageView?.image = UIImage(named: "Result Table Cell Icon")
-            cell.imageView?.alpha = 0.25
+            cell.imageView?.alpha = 0.3
             
             if let diseaseId = self.result["disease_id"] as? String {
                 cell.accessoryType = .disclosureIndicator
@@ -130,7 +134,7 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
             }
             // add image
             cell.imageView?.image = UIImage(named: "Answer Table Cell Icon")
-            cell.imageView?.alpha = 0.5
+            cell.imageView?.alpha = 0.8
         }
         
         // add separator
@@ -169,4 +173,9 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
     @objc func closeAction(_ sender:UIBarButtonItem){
         self.performSegue(withIdentifier: "unwindToScripts", sender: self)
     }
+    
+    @objc func backAction(_ sender:UIBarButtonItem){
+        self.navigationController?.popViewController(animated: true)
+    }
+
 }
