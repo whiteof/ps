@@ -83,12 +83,18 @@ class WhoWeAreViewController: UIViewController, UITableViewDataSource, UITableVi
         return 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 60.0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WhoWeAreCell", for: indexPath)
         if let section = self.rows[indexPath.section] {
             cell.textLabel?.text = section[indexPath.row][0]
             cell.detailTextLabel?.text = section[indexPath.row][1]
+            cell.detailTextLabel?.textColor = UIHelper.textColor
         }
         return cell
     }

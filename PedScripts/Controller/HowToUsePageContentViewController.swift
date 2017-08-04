@@ -1,31 +1,28 @@
 //
-//  TabBarController.swift
+//  HowToUsePageContentViewController.swift
 //  PedScripts
 //
-//  Created by Victor Yurkin on 8/1/17.
+//  Created by Victor Yurkin on 8/4/17.
 //  Copyright © 2017 Weill Cornell Medicine. All rights reserved.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class HowToUsePageContentViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var bottomEdge: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let userDefaults = UserDefaults.standard
-        if let userDefaultsValue = userDefaults.object(forKey: "edu.cornell.weill.PedScripts.firstTimeUser") as? Bool {
-            if userDefaultsValue != true {
-                userDefaults.set("true", forKey: "edu.cornell.weill.PedScripts.firstTimeUser")
-                userDefaults.synchronize()
-                self.selectedIndex = 1
-            }
-        }else {
-            userDefaults.set(true, forKey: "edu.cornell.weill.PedScripts.firstTimeUser")
-            userDefaults.synchronize()
-            self.selectedIndex = 1
-        }
-
+        self.containerView.layer.borderWidth = 1.5
+        self.containerView.layer.cornerRadius = 8.0
+        self.containerView.layer.borderColor = UIColor(red: 93/255, green: 160/255, blue: 209/255, alpha: 0.5).cgColor
+        
+        self.contentViewHeight.constant = self.bottomEdge.frame.origin.y
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,6 +22,8 @@
 		A89CE2F01F32154B0077C264 /* HowToUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CE2EF1F32154B0077C264 /* HowToUseViewController.swift */; };
 		A89CE2F31F321C640077C264 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CE2F21F321C640077C264 /* UILabelExtension.swift */; };
 		A89CE2F61F321D360077C264 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CE2F51F321D360077C264 /* UIHelper.swift */; };
+		A8B1C7E31F34AB3D00A1621F /* HowToUsePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1C7E21F34AB3D00A1621F /* HowToUsePageViewController.swift */; };
+		A8B1C7E51F34AF0400A1621F /* HowToUsePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B1C7E41F34AF0400A1621F /* HowToUsePageContentViewController.swift */; };
 		A8ECCA3D1F3229F400773D87 /* WhoWeAreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */; };
 		A8ECCA3F1F3230ED00773D87 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECCA3E1F3230ED00773D87 /* QuestionViewController.swift */; };
 		A8ECCA4F1F32653700773D87 /* 01.json in Resources */ = {isa = PBXBuildFile; fileRef = A8ECCA4E1F32653600773D87 /* 01.json */; };
@@ -66,6 +68,8 @@
 		A89CE2EF1F32154B0077C264 /* HowToUseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseViewController.swift; sourceTree = "<group>"; };
 		A89CE2F21F321C640077C264 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		A89CE2F51F321D360077C264 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		A8B1C7E21F34AB3D00A1621F /* HowToUsePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUsePageViewController.swift; sourceTree = "<group>"; };
+		A8B1C7E41F34AF0400A1621F /* HowToUsePageContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUsePageContentViewController.swift; sourceTree = "<group>"; };
 		A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoWeAreViewController.swift; sourceTree = "<group>"; };
 		A8ECCA3E1F3230ED00773D87 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		A8ECCA4E1F32653600773D87 /* 01.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 01.json; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				A82DB5E01F31002300B816F7 /* CommonNavigationController.swift */,
 				A89CE2EB1F3107550077C264 /* ScriptsViewController.swift */,
 				A89CE2EF1F32154B0077C264 /* HowToUseViewController.swift */,
+				A8B1C7E21F34AB3D00A1621F /* HowToUsePageViewController.swift */,
+				A8B1C7E41F34AF0400A1621F /* HowToUsePageContentViewController.swift */,
 				A8ECCA3C1F3229F400773D87 /* WhoWeAreViewController.swift */,
 				A8ECCA3E1F3230ED00773D87 /* QuestionViewController.swift */,
 				075E2C141F3285450006F4AF /* ResultViewController.swift */,
@@ -332,9 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8ECCA3D1F3229F400773D87 /* WhoWeAreViewController.swift in Sources */,
+				A8B1C7E51F34AF0400A1621F /* HowToUsePageContentViewController.swift in Sources */,
 				A82DB5E61F3104BF00B816F7 /* TabBarController.swift in Sources */,
 				A89CE2F01F32154B0077C264 /* HowToUseViewController.swift in Sources */,
 				A89CE2EC1F3107550077C264 /* ScriptsViewController.swift in Sources */,
+				A8B1C7E31F34AB3D00A1621F /* HowToUsePageViewController.swift in Sources */,
 				A82DB5E11F31002300B816F7 /* CommonNavigationController.swift in Sources */,
 				075E2C151F3285450006F4AF /* ResultViewController.swift in Sources */,
 				571B3F871F33776A00C7A7C9 /* CustomTableViewCell.swift in Sources */,

@@ -18,7 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // remove user data
-        //self.userDefaults.removeObject(forKey: "edu.cornell.weill.PedScripts.firstTimeUser")
+        //let userDefaults = UserDefaults.standard
+        //userDefaults.removeObject(forKey: "edu.cornell.weill.PedScripts.firstTimeUser")
+        
+        // Enable page controller
+        /*
+        let pageController = UIPageControl.appearance()
+        pageController.pageIndicatorTintColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1.0)
+        pageController.currentPageIndicatorTintColor = UIColor(red: 93/255, green: 160/255, blue: 209/255, alpha: 1.0)
+        pageController.backgroundColor = UIColor.white
+        */
         
         return true
     }
