@@ -110,3 +110,7 @@ td.top-level strong {
     border: 4px solid #aaa;
     padding: 4px;
 }
+
+.sidemenu-container {
+    overflow: auto;
+}
