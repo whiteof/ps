@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <style>
+            #ques{
+                display: none;
+                margin-left: 24px;
+                margin-bottom: 24px;
+            }    
+            #ans{
+                display: none;
+                margin-left: 24px;
+                margin-bottom: 24px;
+            }
+            #result{
+                display: none;
+                margin-left: 24px;
+                margin-bottom: 24px;
+            }
+            #script{
+                display: none;
+                margin-left: 24px;
+                margin-bottom: 24px;
+            }
+            #subscript{
+                display: none;
+                margin-left: 24px;
+                margin-bottom: 24px;
+            }
+            .button{
+                font-style: normal;
+                background-color: #008CBA;
+                font-family: sans-serif;
+                color: white;
+                text-transform: uppercase;
+                font-size: 20px;
+                border-radius: 4px;
+                border: solid #008CBA;
+                display: inline-block;
+                margin-left: 24px;
+                margin-bottom: 24px;
+            }
+            .orgChart {
+                width: 50%;
+                float: right;
+                display: inline-block;
+                margin: 0 auto;
+            }
+            .form-line{
+                border-right: 1px;
+                width: 50%;
+            }
+
+            .form-group{
+                margin-top: 10px;
+                width: 50%;
+            }
+            .section-content{
+                text-align: center; 
+            }
+            #contact{
+                font-family: 'Teko', sans-serif;
+                width: 100%;
+            }
+            .container{
+                margin: 0 auto;
+                margin-left: 12px
+                float: left;
+            }
+            #chart_div{
+                margin: 0 auto;
+                float: right;
+                margin-right: 24px;
+                margin-bottom: 24px;
+            }
+
+        </style>
+        <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <div class="orgChart">
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      var array ;
+      var parent;
+
+      function drawChart(array) {
+        var data = new google.visualization.DataTable();  
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Question');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows(array);
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        google.visualization.events.addListener(chart, 'select', function(){
+            var selectedItem = chart.getSelection()[0];
+            var value = data.getValue(selectedItem.row, 0);
+            parent = value;
+            console.log(parent);
+        });
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {allowHtml:true});
+      }
+
+      function addData(){
+        array = [[{v:'Abdominal Mass', f:'Abdominal Mass<div style="color:red; font-style:italic"></div>'},'', 'Title']];
+        $("#ques").css("display","block");
+        //array.push(array2);
+        drawChart(array);
+        }
+
+        function addData2(){
+        $("#ans").css("display","block");
+        //var array2 = [ques[0].value,"Pain/distress?",'']; 
+        //array.push(array2);
+        //console.log(array2);
+
+        //drawChart(array);
+        //document.getElementsByClassName("ques")[0].value = "";
+        document.getElementsByClassName("ans")[0].value = "";
+        }
+        
+        function addData3(){
+        $("#result").css("display","block");
+        document.getElementsByClassName("result")[0].value = "";
+        }
+        
+        function addData4(){
+        $("#script").css("display","block");
+        document.getElementsByClassName("script")[0].value = "";
+        }
+        
+        function addData5(){
+        $("#subscript").css("display","block");
+        document.getElementsByClassName("subscript")[0].value = "";
+        }
+
+        function updateUI(){
+            var ques = document.getElementsByClassName("ques")[0].value;
+            var ans = document.getElementsByClassName("ans")[0].value;
+            var nodeText;
+
+            if(ques != ""){
+                nodeText = ques;
+            }
+
+            if(ans != ""){
+                nodeText = ans;
+            }
+            
+            var newNode = [nodeText , parent , ''];    
+            console.log(newNode);
+
+            array.push(newNode);
+            drawChart(array);
+            parent = nodeText;
+            document.getElementsByClassName("ques")[0].value = "";
+            document.getElementsByClassName("ans")[0].value = "";
+            document.getElementsByClassName("subscript")[0].value = "";
+            document.getElementsByClassName("script")[0].value = "";
+        }
+    </script>
+    </div>
+<body>
+    
+<section id="contact">
+    <div class="section-content">
+        <h1 style="margin: 12px; color: #008CBA; font-family: verdana; align-content: center">PedScripts Form</h1>
+    </div>
+    <!--div class="contact-section"-->
+    <div class="container">
+        <div id="chart_div"></div>
+            <div class="form-line">
+                <div class="form-group">
+                    <input type="button" class="button" value="Add Question" onclick="addData()" / >
+                    <div id="ques">
+                        <input type="text" class="ques"  placeholder=" Question">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="button"  class="button" value="Add Answer" onclick="addData2()" / ><br>
+                    <div id="ans">
+                        <input type="text" class="ans" placeholder="Answer"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="button"  class="button" value="Add Result" onclick="addData3()" / ><br>
+                    <div id="result">
+                        <input type="text" class="result" placeholder="Result"/>
+                    </div>
+                </div>
+                   <div class="form-group">
+                    <input type="button" class="button" value = "Add" onclick="updateUI()" />
+                </div>
+            </div>
+    </div>
+    <div class="section-content">
+        <h2 style="margin: 12px; color: #008CBA; font-family: verdana;">Illness Scripts</h2>
+    </div>
+    <div class="form-group">
+        <input type="button" class="button" value="Add Script" onclick="addData4()" / >
+        <div id="script">
+            <textarea rows="2" cols="50" class="script" placeholder="Title"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="button" class="button" value="Add Subscript" onclick="addData5()" / >
+        <div id="subscript">
+            <textarea rows="2" cols="50" class="subscript" placeholder="Title"></textarea> <br>
+            <textarea rows="4" cols="50" class="subscript" placeholder="Description"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="button" class="button" value = "Add" onclick="updateUI()" />
+    </div>
+             
+    
+             
+    <!--/div-->
+</section>
+    <button id="generate-json">Generate JSON</button>             
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
