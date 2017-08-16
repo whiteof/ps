@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>PedScripts - Script Builder</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Le styles -->
+        <link href="images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap-theme.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap-chosen.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/layout.css?v=3" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/style.css?v=3" media="screen" rel="stylesheet" type="text/css">
+        
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+    <body>
+        
+        <div class="header">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand logo" href="index.html">
+                            <div class="logo-bar">
+                                <h1>PedScripts</h1>
+                            </div>
+                        </a>
+                        <div class="sublogo-container"><a class="sublogo" href="index.html">Script Builder</a></div>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <!-- Top Menu -->
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </nav>
+        </div>
+        
+        <div id="body-container" class="row">
+        
+            <div class="row-height">
+                <div id="mainbar" class="col-height col-xs-12 col-sm-6 col-lg-5">
+                    <div class="col-content">
+                        <div class="visible-xs">
+                            <div id="toggle-nav"></div>
+                        </div>
+                        <!-- Script Builder -->
+                        <div id="body-content">
+                            
+                            <div id="forms-container">
+                                <div id="form-disease-container" class="form-container current-form-container">
+                                    <h2>Disease</h2>
+                                    <div class="form-group">
+                                        <label>Disease Name:</label>
+                                        <input type="text" class="form-control" id="field-disease" value="" data-toggle="popover" data-placement="bottom" data-content="Disease name is required." />
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-default" id="form-button-create-disease">Add Question</button>
+                                    </div>
+                                </div>
+                                <div id="form-question-container" class="form-container">
+                                    <h2>Question</h2>
+                                    <div class="form-group">
+                                        <label>Question Text:</label>
+                                        <textarea type="text" class="form-control" id="field-question" required="required" value="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Question name is required."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-default" id="form-button-add-answer">Add Answer</button>
+                                    </div>
+                                </div>
+                                <div id="form-answer-container" class="form-container">
+                                    <h2>Answer</h2>
+                                    <div class="form-group">
+                                        <label>Answer Text:</label>
+                                        <textarea type="text" class="form-control" id="field-answer" required="required" value="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Answer name is required."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-default" id="form-button-add-question">Add Question</button>
+                                        <button class="btn btn-default" id="form-button-add-result">Add Result</button>
+                                    </div>
+                                </div>
+                                <div id="form-result-container" class="form-container">
+                                    <h2>Result</h2>
+                                    <div class="form-group">
+                                        <label>Result Text:</label>
+                                        <textarea type="text" class="form-control" id="field-result" required="required" value="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Result name is required."></textarea>
+                                    </div>
+                                    <div class="form-group" id="form-result-link">
+                                        <label>Link To:</label>
+                                        <select class="form-control" id="field-link-disease">
+                                            <option value="">-- select a disease</option>
+                                            <option value="d1">Abdominal Mass</option>
+                                            <option value="d2">Abdominal Pain</option>
+                                            <option value="d3">Anemia</option>
+                                            <option value="d4">Bruising / petechiae</option>
+                                            <option value="d5">Cough</option>
+                                            <option value="d6">Diarrhea</option>
+                                            <option value="d7">Fever and rash</option>
+                                            <option value="d8">Fever without a focus</option>
+                                            <option value="d9">Headache</option>
+                                            <option value="d10">Heart murmur</option>
+                                            <option value="d11">Hematuria</option>
+                                            <option value="d12">Hepatomegaly</option>
+                                            <option value="d13">Leukocoria, Red or Wandering Eye</option>
+                                            <option value="d14">Limp</option>
+                                            <option value="d15">Lymphadenopathy</option>
+                                            <option value="d16">Otalgia</option>
+                                            <option value="d17">Positive PPD</option>
+                                            <option value="d18">Proteinuria</option>
+                                            <option value="d19">Rash</option>
+                                            <option value="d20">Rhinorrhea</option>
+                                            <option value="d21">Seizure</option>
+                                            <option value="d22">Sore throat</option>
+                                            <option value="d23">Splenomegaly</option>
+                                            <option value="d24">Vomiting</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-default" id="form-button-add-disease">Link Disease</button>
+                                        <button class="btn btn-default" id="form-button-add-script">Add Script</button>
+                                    </div>
+                                </div>
+                                <div id="form-script-container" class="form-container">
+                                    <h2>Script</h2>
+                                    <div class="form-group">
+                                        <label>Title:</label>
+                                        <input type="text" class="form-control" id="field-script" required="required" value="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Answer name is required." />
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-default" id="form-button-add-value">Add Values</button>
+                                    </div>
+                                </div>
+                                <div id="form-value-container" class="form-container">
+                                    <h2>Script Value</h2>
+                                    <div class="form-group">
+                                        <label>Title:</label>
+                                        <input type="text" class="form-control" id="field-value-title" required="required" value="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Answer name is required." />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Description:</label>
+                                        <textarea type="text" class="form-control" id="field-value-description" required="required" value="" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Answer name is required."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="json-output-container">
+                                <h4>JSON Output</h4>
+                                <pre id="json-output"></pre>
+                            </div>
+                            
+                        </div>
+                        <!-- End: Script Builder -->
+                    </div>
+                    <footer>
+                        <p>&copy; PedScripts</p>
+                    </footer>
+                </div>
+                <div id="sidebar" class="col-height col-xs-6 col-sm-6 col-lg-7 sidebar-default">
+                    <div class="col-content">
+                        <div class="sidemenu-container">
+                            <div id="chart_div"></div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <table>
+                                <tr>
+                                    <td valign="top">                                
+                                        <div id="scripts_div"></div>
+                                    </td>
+                                    <td valign="top">
+                                        <div id="values_div"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        
+        </div>
+        
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-chosen.js"></script>
+        <script type="text/javascript" src="js/layout.js?v=3"></script>
+        <script type="text/javascript" src="js/script.js?v=3"></script>
+    </body>
+</html>

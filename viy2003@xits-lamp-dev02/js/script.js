@@ -354,7 +354,7 @@ jQuery(function($){
                 // create question object
                 CurrentParentObject = CurrentObject;
                 var ResultObject = new Result();
-                ResultObject.id = Results.length + 1;
+                ResultObject.id = Questions.length + 1;
                 ResultObject.title = "Result Name";
                 Results.push(ResultObject);
                 CurrentParentObject.result = ResultObject;
